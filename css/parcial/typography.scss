@@ -1,0 +1,64 @@
+h1 {
+    @include font($white-color, $xtra-larg-font-size, $primery-font-family, $xtra-larg-font-weight, $larg-line-hight);
+    margin: 0;
+}
+
+h2 {
+    @include font($black-color, $larg-font-size, $primery-font-family, $larg-font-weight, $larg-line-hight);
+    margin: 0;
+}
+
+h3 {
+    @include font($black-color, $xtra-mediam-font-size, $primery-font-family, $larg-font-weight, $mediam-line-hight);
+    margin: 0;
+}
+
+h4 {
+    @include font($them-color, $x-xtra-larg-font-size, $secondry-font-family, $mediam-font-weight, $x-xtra-larg-line-hight);
+    margin:0;
+}
+p{
+    @include font($white-color, $xtra-smool-font-size, $secondry-font-family, $smool-font-weight, $mediam-line-hight);
+    margin: 0;
+    
+}
+
+.btn a {
+    @include font($white-color, $xtra-smool-font-size, $secondry-font-family, $smool-font-weight, $mediam-line-hight);
+    background-color: $them-color;
+    padding: 16px 37px;
+    border-radius:30px;
+    border: solid 1px $them-color;
+    transition: all ease 1s;
+    display:inline-block;
+    &:hover{
+        border-radius:30px;
+        border: solid 1px $white-color;
+        color:$white-color;
+       background: transparent;
+    }
+}
+span{
+@include font($them-color, $xtra-mediam-font-size, $secondry-font-family, $larg-font-weight, $x-xtra-smool-larg-line-hight);
+display: block;
+}
+ul{
+    margin:$margin;
+    column-gap:30px;
+}
+li{
+   list-style: none;     
+}
+a{
+    text-decoration: none;
+    font-family: $third-font-family;
+    color: $black-color;
+    font-size: $xtra-smool-font-size;
+    line-height: $xtra-smool-line-hight;
+    font-weight: $mediam-font-weight;
+    transition: all ease 1s;
+    display: inline-block;
+    &:hover{
+        color: $them-color;
+    }
+}

@@ -1,0 +1,177 @@
+#header {
+    width: 100%;
+    .container{
+        @media screen and (max-width:$x-xtra-small){
+            padding: 0;
+        }
+    }
+
+
+    .header-main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        align-items: center;
+        position: relative;
+       
+        &.show .navigation {
+            display: block;
+        }
+
+        &.show .line-2 {
+            display: none;
+        }
+
+        &.show .line-1 {
+            transform: rotate(-45deg);
+        }
+
+        &.show .line-3 {
+            transform: rotate(45deg);
+            margin: -3px 0px 0px 0px;
+        }
+
+        @media screen and (max-width:$x-xtra-medium) {
+            padding: 20px 0;
+        }
+        @media screen and (max-width:$x-xtra-small){
+            padding: 20px 15px;
+        }
+        @media screen and (max-width:$xtra-small){
+            padding: 15px;
+        }
+
+        .header-logo-images {
+            height: 50px;
+            width: 55px;
+
+            a {
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .navigation {
+            @media screen and (max-width:$x-xtra-small) {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                @media screen and (max-width:$x-xtra-small){
+                    display: block;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 11;
+                    background-color: $white-color;
+                    width: 100%;
+                    padding: 0px 0px;
+                    border: solid 1px $them-color;
+                }
+
+
+                li {
+                    transition: all ease 1s;
+                    @media screen and (max-width:$x-xtra-small){
+                        padding: 10px 0;
+                        border-bottom:solid 1px $them-color;
+                        &:hover{
+                            background-color:$light-white;
+                        }
+                        &.active {
+                            background-color:$light-white;
+                        }
+                    
+                    }
+                    &:hover a::after{
+                        width: 100%;
+                    }
+                    &:hover a{
+                        color: $them-color;
+                    }
+                   
+                    a {
+                        position: relative;
+                        padding-bottom: 5px;
+                        @media screen and (max-width:$x-xtra-small){
+                            margin:0 15px;
+                        }
+                        &.active {
+                            color: $them-color;
+
+                            &::after {
+                                height: 2px;
+                                width: 100%;
+                                background-color: $them-color;
+                                position: absolute;
+                                content: "";
+                                bottom: 0;
+                                left: 0;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        &::after {
+                            height: 2px;
+                            width: 0;
+                            background-color: $them-color;
+                            position: absolute;
+                            content: "";
+                            bottom: 0;
+                            left: 0;
+                            border-radius: 5px;
+                            transition: all 1s;
+
+                        }
+
+                        &:hover:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .toggle-bar {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+
+            @media screen and (max-width:$x-xtra-small) {
+                display: block;
+            }
+
+            .line-1 {
+                height: 3px;
+                width: 30px;
+                background-color: $them-color;
+                transition: all ease 1s;
+            }
+
+            .line-2 {
+                height: 3px;
+                width: 30px;
+                background-color: $them-color;
+                margin: 5px 0;
+                transition: all ease 1s;
+
+            }
+
+            .line-3 {
+                height: 3px;
+                width: 30px;
+                background-color: $them-color;
+                transition: all ease 1s;
+            }
+        }
+
+
+
+    }
+}

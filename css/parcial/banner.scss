@@ -1,0 +1,189 @@
+#banner {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    position: relative;
+
+    &::before {
+        background-color: rgba(0, 0, 0, 0.54);
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        @media screen and (max-width:$x-xtra-small) {
+            z-index: 1;
+        }
+    }
+
+    img {
+        width: 100%;
+
+        @media screen and (max-width:$x-xtra-small) {
+            position: absolute;
+            object-position: center;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .banner-main {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+
+        @media screen and (max-width:$x-xtra-small) {
+            position: relative;
+            transform: inherit;
+            padding: 30px 0;
+            z-index: 3;
+        }
+    }
+
+    .banner-content {
+        width: 100%;
+        
+
+        span {
+            color: $white-color;
+
+            @media screen and (max-width:$large) {
+                font-size: $mediam-font-size;
+                line-height: calc($xtra-smool-line-hight - 4px);
+            }
+        }
+
+
+        h1 {
+            max-width: 430px;
+            padding: 25px 0;
+
+            @media screen and (max-width:$x-xtra-large) {
+                padding: 15px 0;
+            }
+
+            @media screen and (max-width:$xtra-large) {
+                font-size: $larg-font-size;
+                line-height: calc($larg-line-hight - 8px);
+            }
+
+            @media screen and (max-width:$large) {
+                font-size: calc($larg-font-size - 2px);
+                line-height: calc($xtra-mediam-line-hight + 8px);
+            }
+
+            @media screen and (max-width:$xtra-medium) {
+                font-size: calc($larg-font-size - 6px);
+                line-height: calc($xtra-mediam-line-hight + 5px);
+            }
+            @media screen and (max-width:$xtra-small){
+               font-size: calc($x-xtra-mediam-larg-font-size + 3px);
+               line-height: calc($xtra-mediam-line-hight + 2px);
+            }
+
+        }
+
+        p {
+            max-width: 420px;
+            color: $white-color;
+            padding-bottom: 30px;
+
+            @media screen and (max-width:$x-xtra-large) {
+                padding-bottom: 15px;
+            }
+
+            @media screen and (max-width:$large) {
+                line-height: calc($xtra-smool-line-hight - 2px);
+                font-size: $smool-font-size;
+            }
+
+        }
+
+        .btn {
+            a {
+                @media screen and (max-width:$large) {
+                    font-size: $smool-font-size;
+                    line-height: calc($xtra-smool-line-hight - 2px);
+                    padding: 15px 30px;
+                    @media screen and (max-width:$xtra-small){
+                        padding: 12px 15px;
+                        font-size: calc($smool-font-size - 1px);
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .banner-box-main {
+        display: flex;
+        margin-top: 96px;
+        width: 100%;
+
+        @media screen and (max-width:$x-xtra-large) {
+            margin-top: 40px
+        }
+
+        @media screen and (max-width:$xtra-large) {
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width:$large) {
+            margin-top: 15px;
+        }
+
+        @media screen and (max-width:$x-xtra-medium) {
+            display: none;
+        }
+
+
+
+
+        .slide-item {
+            // padding: 0 15px;
+            display: inline-block;
+
+            .banner-box {
+                background-color: $white-color;
+                border-radius: 20px;
+                padding: 13px 55px 64px 13px;
+                margin: 0 15px;
+                display: inline-block;
+
+                @media screen and (max-width:$large) {
+                    padding: 13px 55px 30px 13px;
+                }
+
+                span {
+                    a {
+                        height: 25px;
+                        width: 32px;
+                    }
+                }
+
+                h3 {
+                    font-weight: $mediam-font-weight;
+                    padding: 17px 0 16px 0;
+                }
+
+                p {
+                    color: $primery-color;
+                }
+            }
+        }
+    }
+}
+
+.slick-dots {
+    margin-bottom: -40px;
+}
+
+.slick-dots li button:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $them-color;
+    z-index: 11;
+    font-size: 0;
+}

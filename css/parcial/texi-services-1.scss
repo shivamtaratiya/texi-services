@@ -1,0 +1,145 @@
+#texi-services-1 {
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 90px 0;
+
+    @media screen and (max-width:$x-xtra-medium) {
+        padding: 80px 0;
+    }
+
+    @media screen and (max-width:$xtra-medium) {
+        padding: 70px 0;
+    }
+
+    @media screen and (max-width:$medium) {
+        padding: 60px 0;
+    }
+    @media screen and (max-width:$x-xtra-small) {
+        padding: 50px 0;
+    }
+    @media screen and (max-width:$xtra-small){
+        padding: 40px 0;
+    }
+    .texi-services-main {
+        display: flex;
+        column-gap: 36px;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        // @media screen and (max-width:$medium){
+        //    row-gap: 15px;
+        // }
+        .texi-services-left {
+            width: calc(50% - 18px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media screen and (max-width:$x-xtra-small) {
+              width: 100%;
+            }
+            span {
+                @media screen and (max-width:$medium){
+                    padding:0;
+                    font-size: $mediam-font-size;
+                    line-height: calc($xtra-smool-line-hight - 4px);
+                }
+                @media screen and (max-width:$x-xtra-small) {
+                    font-size: calc($mediam-font-size - 2px);
+                    line-height: calc($xtra-smool-line-hight - 6px);
+                 }
+                 @media screen and (max-width:$xtra-small) {
+                    font-size: calc($smool-font-size);
+                    line-height:$xtra-smool-line-hight;
+                 }
+            }
+
+            h2 {
+                padding: 20px 0;
+                line-height: calc($larg-line-hight - 5px);
+                @media screen and (max-width:$medium){
+                   padding: 15px 0;
+                   font-size:calc($larg-font-size - 6px);
+                   line-height: calc($xtra-mediam-line-hight + 5px);
+                }
+                @media screen and (max-width:$x-xtra-small) {
+                   font-size: calc($x-xtra-mediam-larg-font-size + 4px);
+                   line-height: calc($xtra-mediam-line-hight + 2px);
+                 }
+                 @media screen and (max-width:$xtra-small){
+                   font-size: calc($x-xtra-mediam-larg-font-size + 1px);
+                   line-height: $xtra-mediam-line-hight;
+                }
+            }
+
+            p {
+                color: $black-color;
+                max-width: 1110px;
+                margin-bottom: 45px;
+
+                @media screen and (max-width:$x-xtra-medium) {
+                    margin-bottom: 20px;
+                }
+                @media screen and (max-width:$medium) {
+                    margin-bottom:15px;
+                    line-height:$xtra-smool-line-hight;
+                    font-size: $smool-font-size;
+
+                }
+            }
+
+            .box-time-main {
+                display: flex;
+                column-gap: 17px;
+                background-color: $white-color;
+                border-radius: 15px;
+                box-shadow: 0 4px 4px 0 $secondry-color;
+                padding: 24px 40px 28px 15px;
+                @media screen and (max-width:$medium) {
+                   padding: 15px;
+
+                }
+
+                &:nth-child(odd) {
+                    position: relative;
+                    margin-top: 40px;
+
+                    @media screen and (max-width:$x-xtra-medium) {
+                        margin-top: 20px;
+
+                    }
+                }
+
+                .box-time-content {
+                    h3{
+                        @media screen and (max-width:$xtra-small) {
+                            font-size: calc($mediam-font-size - 2px);
+                            line-height: $xtra-smool-line-hight;
+                        }
+                    }
+                    p {
+                        padding-top: 15px;
+                        color: $secondry-color;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .texi-services-right {
+            width: calc(50% - 18px);
+
+            @media screen and (max-width:$x-xtra-small) {
+               width: 100%;
+              }
+            img {
+                width: 100%;
+                height: 100%;
+                @media screen and (max-width:$x-xtra-small) {
+                    width: 100%;
+                    height: auto;
+                  }
+            }
+        }
+
+    }
+}

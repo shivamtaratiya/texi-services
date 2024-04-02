@@ -1,0 +1,92 @@
+#services {
+    width: 100%;
+    padding: 108px 0;
+
+    @media screen and (max-width:$x-xtra-medium) {
+        padding: 80px 0;
+    }
+
+    @media screen and (max-width:$xtra-medium) {
+        padding: 70px 0;
+    }
+
+    @media screen and (max-width:$medium) {
+        padding: 60px 0;
+    }
+    @media screen and (max-width:$x-xtra-small) {
+        padding: 50px 0;
+    }
+    @media screen and (max-width:$xtra-small){
+        padding: 40px 0;
+    }
+    .services-main {
+        width: 100%;
+        column-gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .services-box-main {
+            width: calc(33.33% - 20px);
+            @media screen and (max-width:$x-xtra-small){
+                width: 100%;
+                text-align: center;
+                &:nth-child(even){
+                    position: relative;
+                    margin: 20px 0;
+                }
+            }
+
+            span {
+                display: block;
+                padding: 30px 0 10px 0;
+
+                @media screen and (max-width:$x-xtra-medium) {
+                    padding: 15px 0;
+                    font-size: $mediam-font-size;
+                    line-height: calc($xtra-smool-line-hight - 4px);
+                }
+
+                @media screen and (max-width:$medium) {
+                    padding: 15px 0;
+                }
+                @media screen and (max-width:$x-xtra-small) {
+                   font-size: calc($mediam-font-size - 2px);
+                   line-height: calc($xtra-smool-line-hight - 6px);
+                }
+                @media screen and (max-width:$xtra-small) {
+                    font-size: calc($smool-font-size);
+                    line-height:$xtra-smool-line-hight;
+                 }
+                
+            }
+            h3{
+                @media screen and (max-width:$xtra-small) {
+                    font-size: calc($mediam-font-size - 2px);
+                    line-height: $xtra-smool-line-hight;
+                }
+            }
+
+            p {
+                color: $black-color;
+                padding: 10px 0 50px 0;
+
+                @media screen and (max-width:$x-xtra-medium) {
+                    padding: 15px 0;
+
+                }
+                @media screen and (max-width:$medium) {
+                    margin-bottom:15px;
+                    line-height:$xtra-smool-line-hight;
+                    font-size: $smool-font-size;
+
+                }
+                @media screen and (max-width:$x-xtra-small) {
+                   margin: 0;
+                   padding:15px 0 0 0 ;
+                 }
+            }
+
+        }
+    }
+}
